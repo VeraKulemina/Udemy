@@ -1,22 +1,6 @@
-const books = [
-    {
-        name: 'book1',
-        price: 1
-    },
-    {
-        name: 'book2',
-        price: 2
-    },
-    {
-        name: 'book3',
-        price: 3
-    },
-    {
-        name: 'book4',
-        price: 4
-    }
-]
-
-books.forEach(function (book) {
-    console.log(`${book.name} ${book.price}`)
-});
+const obj = {
+    one: 1,
+    two: 2,
+    three: 3
+}
+const {one : first} = obj
