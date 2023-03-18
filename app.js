@@ -1,6 +1,3 @@
-const obj = {
-    one: 1,
-    two: 2,
-    three: 3
-}
-const {one : first} = obj
+function getRealFloor(n) {
+    return n > 13 ? n - 2 : n > 0 ? n - 1 : n;
+  }
