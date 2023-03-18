@@ -5,3 +5,9 @@ function getRealFloor(n) {
   function mergeArrays(arr1, arr2) {
     return arr1.filter((item) => !arr2.includes(item)).concat(arr2).sort((a, b) => a - b)
   }
+
+  function capitalize(s){
+    const ar= s.split("").map((a,i) => i % 2 === 0 ? a.toUpperCase() : a ).join("")
+    const ar2= s.split("").map((a,i) => i % 2 !== 0 ? a.toUpperCase() : a ).join("")  
+    return [ar, ar2]
+  };
