@@ -11,3 +11,9 @@ function getRealFloor(n) {
     const ar2= s.split("").map((a,i) => i % 2 !== 0 ? a.toUpperCase() : a ).join("")  
     return [ar, ar2]
   };
+
+  const auth ={
+    login() {
+      console.log("logged");
+    }
+  }
