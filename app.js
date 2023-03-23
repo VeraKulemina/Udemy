@@ -1,19 +1,16 @@
-function getRealFloor(n) {
-    return n > 13 ? n - 2 : n > 0 ? n - 1 : n;
-  }
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [1, 2, 3, 4, 6];
 
-  function mergeArrays(arr1, arr2) {
-    return arr1.filter((item) => !arr2.includes(item)).concat(arr2).sort((a, b) => a - b)
-  }
-
-  function capitalize(s){
-    const ar= s.split("").map((a,i) => i % 2 === 0 ? a.toUpperCase() : a ).join("")
-    const ar2= s.split("").map((a,i) => i % 2 !== 0 ? a.toUpperCase() : a ).join("")  
-    return [ar, ar2]
-  };
-
-  const auth ={
-    login() {
-      console.log("logged");
+function findOdd(arr1, arr2) {
+  const arr3 = [];
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+        if (!arr2.includes(arr1[i]) && !arr1.includes(arr2[j])) {
+      arr3.push(arr1[i], arr2[j]);
+    }
     }
   }
+  return arr3;
+}
+
+console.log(findOdd(arr1, arr2));
